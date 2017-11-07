@@ -1,0 +1,1 @@
+C:\Users\Sebastian Kreuzer\Documents\git\ProjektarbeitWS17\src\HoloLensRezept\HoloLensRezept\HoloLensRezept.csproj;x86

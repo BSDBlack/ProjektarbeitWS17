@@ -26,5 +26,17 @@ namespace HoloLensRezept
         {
             this.InitializeComponent();
         }
+
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ContentDialog buttonpress = new ContentDialog
+            {
+                Title = "Button pressed",
+                Content = "You pressed a button.",
+                CloseButtonText = "Ok"
+            };
+
+            await buttonpress.ShowAsync();
+        }
     }
 }
