@@ -20,16 +20,16 @@ namespace HoloLensRezept
     /// <summary>
     /// Eine leere Seite, die eigenständig verwendet oder zu der innerhalb eines Rahmens navigiert werden kann.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class MyRecieps : Page
     {
-        public MainPage()
+        public MyRecieps()
         {
             this.InitializeComponent();
         }
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MyRecieps));
+            Frame.Navigate(typeof(MainPage));
         }
     }
 }
