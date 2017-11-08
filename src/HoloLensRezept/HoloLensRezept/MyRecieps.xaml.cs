@@ -27,7 +27,8 @@ namespace HoloLensRezept
             this.InitializeComponent();
         }
 
-        private async void Button_Click(object sender, RoutedEventArgs e)
+        /* Function for navigation to previous page */
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPage));
         }
