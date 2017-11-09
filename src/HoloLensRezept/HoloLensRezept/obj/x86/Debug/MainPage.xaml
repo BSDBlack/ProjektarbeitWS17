@@ -15,14 +15,14 @@
                    HorizontalAlignment="Center"/>
             </StackPanel>
         </Button>
-        <Button HorizontalAlignment="Left" Height="200" Margin="20,240,0,0" VerticalAlignment="Top" Width="188" Click="Button_Click">
+        <Button x:ConnectionId='1' HorizontalAlignment="Left" Height="200" Margin="20,240,0,0" VerticalAlignment="Top" Width="188"                     >
             <StackPanel>
                 <Image Source="Assets/MeineRezept_Pikto.svg" Width="162" Height="162"/>
                 <TextBlock Text="Meine Rezepte" Foreground="Black"
                    HorizontalAlignment="Center"/>
             </StackPanel>
         </Button>
-        <Button HorizontalAlignment="Left" Height="200" Margin="228,240,0,0" VerticalAlignment="Top" Width="188" Click="Button_Click_1" >
+        <Button x:ConnectionId='2' HorizontalAlignment="Left" Height="200" Margin="228,240,0,0" VerticalAlignment="Top" Width="188"                        >
             <StackPanel>
                 <Image Source="Assets/Suche_Pikto.svg" Height="162"/>
                 <TextBlock Text="Suche" Foreground="Black"
@@ -45,3 +45,4 @@
         </Button>
     </Grid>
 </Page>
+
