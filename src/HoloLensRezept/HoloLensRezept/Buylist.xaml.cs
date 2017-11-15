@@ -25,6 +25,11 @@ namespace HoloLensRezept
         public Buylist()
         {
             this.InitializeComponent();
+
+
+            BuyListView.Items.Add("Kartoffeln");
+            BuyListView.Items.Add("Kekse");
+            BuyListView.Items.Add("Mehl");
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

@@ -13,12 +13,12 @@
                 <Image Source="Assets/RezeptdesTagesBanner.png" Stretch="Fill" />
             </StackPanel>
         </Button>
-        <Button HorizontalAlignment="Left" Height="200" Margin="20,240,0,0" VerticalAlignment="Top" Width="188" Click="MyRecieps_Click">
+        <Button x:ConnectionId='1' HorizontalAlignment="Left" Height="200" Margin="20,240,0,0" VerticalAlignment="Top" Width="188"                        >
             <StackPanel>
                 <Image Source="Assets/MeineRezepte_Pikto.png" Stretch="Fill" />
             </StackPanel>
         </Button>
-        <Button HorizontalAlignment="Left" Height="200" Margin="228,240,0,0" VerticalAlignment="Top" Width="188" Click="Search_Click" >
+        <Button x:ConnectionId='2' HorizontalAlignment="Left" Height="200" Margin="228,240,0,0" VerticalAlignment="Top" Width="188"                      >
             <StackPanel>
                 <Image Source="Assets/Suche_Pikto.png" Stretch="Fill" />
             </StackPanel>
@@ -28,10 +28,11 @@
                 <Image Source="Assets/Einstellungen_Pikto.png" Stretch="Fill" />
             </StackPanel>
         </Button>
-        <Button HorizontalAlignment="Left" Height="200" Margin="644,240,0,0" VerticalAlignment="Top" Width="188" Click="Tools_Click">
+        <Button x:ConnectionId='3' HorizontalAlignment="Left" Height="200" Margin="644,240,0,0" VerticalAlignment="Top" Width="188"                    >
             <StackPanel>
                 <Image Source="Assets/Toosl_Pikto.png" Stretch="Fill" />
             </StackPanel>
         </Button>
     </Grid>
 </Page>
+

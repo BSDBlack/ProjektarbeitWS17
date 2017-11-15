@@ -8,7 +8,7 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button HorizontalAlignment="Left" Height="200" Margin="20,20,0,0" VerticalAlignment="Top" Width="188" Click="Button_Click">
+        <Button x:ConnectionId='1' HorizontalAlignment="Left" Height="200" Margin="20,20,0,0" VerticalAlignment="Top" Width="188"                     >
             <StackPanel>
                 <Image Source="Assets/zurueck_Pikto.png" Height="162"/>
                 <TextBlock Text="Zurück" Foreground="Black"
@@ -26,3 +26,4 @@
         </Grid>
     </Grid>
 </Page>
+
