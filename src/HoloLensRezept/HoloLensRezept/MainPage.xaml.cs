@@ -28,15 +28,20 @@ namespace HoloLensRezept
         }
 
         /* Function for navigation to MyRecieps page */
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void MyRecieps_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MyRecieps));
         }
 
         /* Function for navigation to Search page */
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Search_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(Search));
+        }
+
+        private void Tools_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Tools));
         }
     }
 }

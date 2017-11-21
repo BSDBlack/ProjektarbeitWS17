@@ -22,7 +22,7 @@
                    HorizontalAlignment="Center"/>
             </StackPanel>
         </Button>
-        <Button HorizontalAlignment="Left" Height="200" Margin="228,240,0,0" VerticalAlignment="Top" Width="188">
+        <Button HorizontalAlignment="Left" Height="200" Margin="228,240,0,0" VerticalAlignment="Top" Width="188" Click="BuyList_Click">
             <StackPanel>
                 <Image Source="Assets/Einkaufsliste_Pikto.png" Height="162"/>
                 <TextBlock Text="Einkaufsliste" Foreground="Black"

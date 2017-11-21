@@ -10,37 +10,27 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Button HorizontalAlignment="Left" Height="200" Margin="20,20,0,0" VerticalAlignment="Top" Width="810">
             <StackPanel>
-                <Image Source="Assets/RezeptdesTagesBanner.png" Height="162" />
-                <TextBlock Text="Rezept des Tages" Foreground="Black"
-                   HorizontalAlignment="Center"/>
+                <Image Source="Assets/RezeptdesTagesBanner.png" Stretch="Fill" />
             </StackPanel>
         </Button>
-        <Button HorizontalAlignment="Left" Height="200" Margin="20,240,0,0" VerticalAlignment="Top" Width="188" Click="Button_Click">
+        <Button HorizontalAlignment="Left" Height="200" Margin="20,240,0,0" VerticalAlignment="Top" Width="188" Click="MyRecieps_Click">
             <StackPanel>
-                <Image Source="Assets/MeineRezepte_Pikto.png" Width="162" Height="162"/>
-                <TextBlock Text="Meine Rezepte" Foreground="Black"
-                   HorizontalAlignment="Center"/>
+                <Image Source="Assets/MeineRezepte_Pikto.png" Stretch="Fill" />
             </StackPanel>
         </Button>
-        <Button HorizontalAlignment="Left" Height="200" Margin="228,240,0,0" VerticalAlignment="Top" Width="188" Click="Button_Click_1" >
+        <Button HorizontalAlignment="Left" Height="200" Margin="228,240,0,0" VerticalAlignment="Top" Width="188" Click="Search_Click" >
             <StackPanel>
-                <Image Source="Assets/Suche_Pikto.svg" Height="162"/>
-                <TextBlock Text="Suche" Foreground="Black"
-                   HorizontalAlignment="Center"/>
+                <Image Source="Assets/Suche_Pikto.png" Stretch="Fill" />
             </StackPanel>
         </Button>
         <Button HorizontalAlignment="Left" Height="200" Margin="436,240,0,0" VerticalAlignment="Top" Width="188">
             <StackPanel>
-                <Image Source="Assets/Settings_Pikto.svg" Height="162"/>
-                <TextBlock Text="Settings" Foreground="Black"
-                   HorizontalAlignment="Center"/>
+                <Image Source="Assets/Einstellungen_Pikto.png" Stretch="Fill" />
             </StackPanel>
         </Button>
-        <Button HorizontalAlignment="Left" Height="200" Margin="644,240,0,0" VerticalAlignment="Top" Width="188">
+        <Button HorizontalAlignment="Left" Height="200" Margin="644,240,0,0" VerticalAlignment="Top" Width="188" Click="Tools_Click">
             <StackPanel>
-                <Image Source="Assets/Toosl_Pikto.svg" Height="162"/>
-                <TextBlock Text="Tools" Foreground="Black"
-                   HorizontalAlignment="Center"/>
+                <Image Source="Assets/Toosl_Pikto.png" Stretch="Fill" />
             </StackPanel>
         </Button>
     </Grid>

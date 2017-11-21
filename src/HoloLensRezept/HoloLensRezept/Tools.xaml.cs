@@ -32,5 +32,10 @@ namespace HoloLensRezept
         {
             Frame.Navigate(typeof(MainPage));
         }
+
+        private void BuyList_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Buylist));
+        }
     }
 }
