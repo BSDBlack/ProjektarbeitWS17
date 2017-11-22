@@ -122,15 +122,17 @@
     <None Include="HoloLensRezept_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Einkaufsliste_Pikto.png" />
-    <Content Include="Assets\Einstellungen_Pikto.png" />
-    <Content Include="Assets\MeineRezepte_Pikto.png" />
-    <Content Include="Assets\RezeptdesTagesBanner.png" />
+    <Content Include="Assets\add_Freigestellt.png" />
+    <Content Include="Assets\Delete_Freigestellt.png" />
+    <Content Include="Assets\Einkaufsliste_Freigestellt.png" />
+    <Content Include="Assets\Einstellungen_Freigestellt.png" />
+    <Content Include="Assets\MeineRezepte_Freigestellt.png" />
+    <Content Include="Assets\RezeptdesTagesBannerVersion2.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
-    <Content Include="Assets\Suche_Pikto.png" />
-    <Content Include="Assets\Toosl_Pikto.png" />
-    <Content Include="Assets\Wecker_Pikto.png" />
-    <Content Include="Assets\zurueck_Pikto.png" />
+    <Content Include="Assets\Suche_Freigestellt.png" />
+    <Content Include="Assets\Tools_Freigestellt.png" />
+    <Content Include="Assets\Wecker_Freigestellt.png" />
+    <Content Include="Assets\zurueck_Freigestellt.png" />
     <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
   <ItemGroup>

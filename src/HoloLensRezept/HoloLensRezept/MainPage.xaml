@@ -10,27 +10,27 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Button HorizontalAlignment="Left" Height="200" Margin="20,20,0,0" VerticalAlignment="Top" Width="810">
             <StackPanel>
-                <Image Source="Assets/RezeptdesTagesBanner.png" Stretch="Fill" />
+                <Image Source="Assets/RezeptdesTagesBannerVersion2.png" Stretch="Fill" />
             </StackPanel>
         </Button>
         <Button HorizontalAlignment="Left" Height="200" Margin="20,240,0,0" VerticalAlignment="Top" Width="188" Click="MyRecieps_Click">
             <StackPanel>
-                <Image Source="Assets/MeineRezepte_Pikto.png" Stretch="Fill" />
+                <Image Source="Assets/MeineRezepte_Freigestellt.png" Stretch="Fill" />
             </StackPanel>
         </Button>
         <Button HorizontalAlignment="Left" Height="200" Margin="228,240,0,0" VerticalAlignment="Top" Width="188" Click="Search_Click" >
             <StackPanel>
-                <Image Source="Assets/Suche_Pikto.png" Stretch="Fill" />
+                <Image Source="Assets/Suche_Freigestellt.png" Stretch="Fill" />
             </StackPanel>
         </Button>
         <Button HorizontalAlignment="Left" Height="200" Margin="436,240,0,0" VerticalAlignment="Top" Width="188">
             <StackPanel>
-                <Image Source="Assets/Einstellungen_Pikto.png" Stretch="Fill" />
+                <Image Source="Assets/Einstellungen_Freigestellt.png" Stretch="Fill" />
             </StackPanel>
         </Button>
         <Button HorizontalAlignment="Left" Height="200" Margin="644,240,0,0" VerticalAlignment="Top" Width="188" Click="Tools_Click">
             <StackPanel>
-                <Image Source="Assets/Toosl_Pikto.png" Stretch="Fill" />
+                <Image Source="Assets/Tools_Freigestellt.png" Stretch="Fill" />
             </StackPanel>
         </Button>
     </Grid>
