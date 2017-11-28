@@ -8,21 +8,21 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button HorizontalAlignment="Left" Height="200" Margin="20,20,0,0" VerticalAlignment="Top" Width="188" Click="Button_Click">
+        <ListView Name="BuyListView" Height="202" Margin="20,20,20,0" VerticalAlignment="Top" />
+        <Button HorizontalAlignment="Left" Height="200" Margin="20,240,0,0" VerticalAlignment="Top" Width="188" Click="Back_Click" Background="DarkGray">
             <StackPanel>
                 <Image Source="Assets/zurueck_Freigestellt.png" Height="162"/>
             </StackPanel>
         </Button>
-        <Button HorizontalAlignment="Left" Height="200" Margin="228,20,0,0" VerticalAlignment="Top" Width="188" Click="Button_Click">
+        <Button HorizontalAlignment="Left" Height="200" Margin="228,240,0,0" VerticalAlignment="Top" Width="188" Click="Add_Click" Background="DarkGray">
             <StackPanel>
-                <Image Source="Assets/add_Freigestellt.png" Height="162"/>
+                <Image Source="Assets/AddPiktogramm.png" Height="162"/>
             </StackPanel>
         </Button>
-        <Button HorizontalAlignment="Left" Height="200" Margin="436,20,0,0" VerticalAlignment="Top" Width="188" Click="Button_Click">
+        <Button HorizontalAlignment="Left" Height="200" Margin="436,240,0,0" VerticalAlignment="Top" Width="188" Click="Delete_Click" Background="DarkGray">
             <StackPanel>
-                <Image Source="Assets/Delete_Freigestellt.png" Height="162"/>
+                <Image Source="Assets/DeletePiktogramm.png" Height="162"/>
             </StackPanel>
         </Button>
-        <ListView Name="BuyListView" Height="202" Margin="20,240,20,0" VerticalAlignment="Top" Width="853"/>
     </Grid>
 </Page>

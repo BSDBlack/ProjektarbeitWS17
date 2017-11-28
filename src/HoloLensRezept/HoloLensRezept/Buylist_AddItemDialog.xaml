@@ -1,0 +1,19 @@
+﻿<ContentDialog
+    x:Class="HoloLensRezept.Buylist_AddItemDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:App1"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="ContentDialog"
+    Title="Add Item to Buylist"
+    PrimaryButtonClick="ContentDialog_AddButtonClick"
+    PrimaryButtonText="Add"
+    SecondaryButtonClick="ContentDialog_CancelButtonClick"
+    SecondaryButtonText="Cancel"
+    mc:Ignorable="d">
+
+    <Grid>
+        <TextBox Text="{Binding ElementName=ContentDialog, Path=Text, Mode=TwoWay}" />
+    </Grid>
+</ContentDialog>

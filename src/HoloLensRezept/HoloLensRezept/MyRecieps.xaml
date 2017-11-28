@@ -8,32 +8,32 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button HorizontalAlignment="Left" Height="200" Margin="20,20,0,0" VerticalAlignment="Top" Width="188" Click="Button_Click">
+        <Button HorizontalAlignment="Left" Height="200" Margin="20,240,0,0" VerticalAlignment="Top" Width="188" Click="Button_Click">
             <StackPanel>
                 <Image Source="Assets/zurueck_Freigestellt.png" Height="162"/>
             </StackPanel>
         </Button>
-        <Button HorizontalAlignment="Left" Height="200" Margin="228,20,0,0" VerticalAlignment="Top" Width="605">
+        <Button HorizontalAlignment="Left" Height="200" Margin="228,240,0,0" VerticalAlignment="Top" Width="605">
             <StackPanel>
                 <Image Source="Assets/Photo.png" Height="162"/>
             </StackPanel>
         </Button>
-        <Button HorizontalAlignment="Left" Height="200" Margin="20,240,0,0" VerticalAlignment="Top" Width="188">
+        <Button HorizontalAlignment="Left" Height="200" Margin="20,20,0,0" VerticalAlignment="Top" Width="188">
             <StackPanel>
                 <Image Source="Assets/Photo.png" Height="162"/>
             </StackPanel>
         </Button>
-        <Button HorizontalAlignment="Left" Height="200" Margin="228,240,0,0" VerticalAlignment="Top" Width="188">
+        <Button HorizontalAlignment="Left" Height="200" Margin="228,20,0,0" VerticalAlignment="Top" Width="188">
             <StackPanel>
                 <Image Source="Assets/Photo.png" Height="162"/>
             </StackPanel>
         </Button>
-        <Button HorizontalAlignment="Left" Height="200" Margin="436,240,0,0" VerticalAlignment="Top" Width="188">
+        <Button HorizontalAlignment="Left" Height="200" Margin="436,20,0,0" VerticalAlignment="Top" Width="188">
             <StackPanel>
                 <Image Source="Assets/Photo.png" Height="162"/>
             </StackPanel>
         </Button>
-        <Button HorizontalAlignment="Left" Height="200" Margin="644,240,0,0" VerticalAlignment="Top" Width="188">
+        <Button HorizontalAlignment="Left" Height="200" Margin="644,20,0,0" VerticalAlignment="Top" Width="188">
             <StackPanel>
                 <Image Source="Assets/Photo.png" Height="162"/>
             </StackPanel>

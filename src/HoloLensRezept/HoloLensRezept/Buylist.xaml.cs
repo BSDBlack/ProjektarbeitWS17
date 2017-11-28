@@ -32,9 +32,30 @@ namespace HoloLensRezept
             BuyListView.Items.Add("Mehl");
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Back_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(Tools));
+        }
+
+        private async void Add_Click(object sender, RoutedEventArgs e)
+        {
+            String itemname = String.Empty;
+            var dialog = new Buylist_AddItemDialog();
+            ContentDialogResult cdr = await dialog.ShowAsync();
+
+            if (cdr == ContentDialogResult.Primary)
+            {
+                itemname = dialog.Text;
+                this.BuyListView.Items.Add(itemname);
+            }
+
+            
+
+        }
+
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+            this.BuyListView.Items.Remove(this.BuyListView.SelectedItem);
         }
     }
 }
