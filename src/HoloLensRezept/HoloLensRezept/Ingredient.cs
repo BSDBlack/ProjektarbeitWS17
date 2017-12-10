@@ -1,11 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Runtime.Serialization;
 
-public class Ingredient
+namespace HoloLensRezept
 {
     [DataContract]
-	public Ingredient()
-	{
+    public class Ingredient
+    {
         [DataMember(Name = "id")]
         string Id;
         [DataMember(Name = "name")]
@@ -26,5 +30,5 @@ public class Ingredient
         string FoodId;
         [DataMember(Name = "productGroup")]
         string ProductGroup;
-	}
+    }
 }
