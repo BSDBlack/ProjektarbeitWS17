@@ -11,7 +11,7 @@ namespace HoloLensRezept
     public class Owner
     {
         [DataMember(Name ="id")]
-        int Id { get; set; }
+        string Id { get; set; }
         [DataMember(Name = "username")]
         string Username { get; set; }
         [DataMember(Name = "rank")]

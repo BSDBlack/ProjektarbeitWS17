@@ -37,13 +37,13 @@ namespace HoloLensRezept
         [DataMember(Name = "isRejected")]
         bool IsRejected { get; set; }
         [DataMember(Name = "createdAt")]
-        DateTime CreatedAt { get; set; }
+        string CreatedAt { get; set; }
         [DataMember(Name = "imageCount")]
         int ImageCount { get; set; }
         [DataMember(Name = "editor")]
         string Editor { get; set; }
         [DataMember(Name = "submissionDate")]
-        DateTime SubmissionDate { get; set; }
+        string SubmissionDate { get; set; }
         [DataMember(Name = "isPremium")]
         bool IsPremium { get; set; }
         [DataMember(Name = "status")]
@@ -53,7 +53,7 @@ namespace HoloLensRezept
         [DataMember(Name = "kCalories")]
         int KCalories { get; set; }
         [DataMember(Name = "instructions")]
-        string Instructions { get; set; }
+        public string Instructions { get; set; }
         [DataMember(Name = "miscellaneousText")]
         string MiscellaneousText { get; set; }
         [DataMember(Name = "ingredientsText")]
@@ -71,7 +71,7 @@ namespace HoloLensRezept
         [DataMember(Name = "ingredientGroups")]
         List<IngredientGroup> IngredientsGroups { get; set; }
         [DataMember(Name = "categoryGroups")]
-        List<Int> CategoryGroups { get; set; }
+        List<int> CategoryGroups { get; set; }
         [DataMember(Name = "recipeVideoId")]
         string RecipeVideoId { get; set; }
         [DataMember(Name = "siteUrl")]
