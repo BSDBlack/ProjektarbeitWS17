@@ -11,44 +11,70 @@ namespace HoloLensRezept
     class Recipe
     {
         [DataMember(Name = "id")]
-        string Id;
+        string Id { get; set; }
         [DataMember(Name = "type")]
-        int Type;
+        int Type { get; set; }
         [DataMember(Name = "title")]
-        string Title;
+        string Title { get; set; }
         [DataMember(Name = "subtitle")]
-        string Subtitle;
+        string Subtitle { get; set; }
         [DataMember(Name = "owner")]
-        Owner OwnerVal;
+        Owner OwnerVal { get; set; }
         [DataMember(Name = "rating")]
-        Rating RatingVal;
+        Rating RatingVal { get; set; }
         [DataMember(Name = "difficulty")]
-        int Difficulty;
+        int Difficulty { get; set; }
         [DataMember(Name = "hasImage")]
-        bool hasImage;
+        bool hasImage { get; set; }
         [DataMember(Name = "hasVideo")]
-        bool hasVideo;
+        bool hasVideo { get; set; }
         [DataMember(Name = "previewImageId")]
-        string PreviewImageId;
+        string PreviewImageId { get; set; }
         [DataMember(Name = "preparationTime")]
-        int preparationTime;
+        int preparationTime { get; set; }
         [DataMember(Name = "isSubmitted")]
-        bool IsSubmitted;
+        bool IsSubmitted { get; set; }
         [DataMember(Name = "isRejected")]
-        bool IsRejected;
+        bool IsRejected { get; set; }
         [DataMember(Name = "createdAt")]
-        DateTime CreatedAt;
+        DateTime CreatedAt { get; set; }
         [DataMember(Name = "imageCount")]
-        int ImageCount;
+        int ImageCount { get; set; }
         [DataMember(Name = "editor")]
-        string Editor;
+        string Editor { get; set; }
         [DataMember(Name = "submissionDate")]
-        DateTime SubmissionDate;
+        DateTime SubmissionDate { get; set; }
         [DataMember(Name = "isPremium")]
-        bool IsPremium;
+        bool IsPremium { get; set; }
         [DataMember(Name = "status")]
-        int Status;
+        int Status { get; set; }
+        [DataMember(Name = "servings")]
+        int Servings { get; set; }
+        [DataMember(Name = "kCalories")]
+        int KCalories { get; set; }
+        [DataMember(Name = "instructions")]
+        string Instructions { get; set; }
+        [DataMember(Name = "miscellaneousText")]
+        string MiscellaneousText { get; set; }
+        [DataMember(Name = "ingredientsText")]
+        string IngredientsText { get; set; }
+        [DataMember(Name = "tags")]
+        List<String> Tags { get; set; }
+        [DataMember(Name = "viewCount")]
+        int ViewCount { get; set; }
+        [DataMember(Name = "cookingTime")]
+        int CookingTime { get; set; }
+        [DataMember(Name = "restingTime")]
+        int RestingTime { get; set; }
+        [DataMember(Name = "totalTime")]
+        int TotalTime { get; set; }
+        [DataMember(Name = "ingredientGroups")]
+        List<IngredientGroup> IngredientsGroups { get; set; }
+        [DataMember(Name = "categoryGroups")]
+        List<Int> CategoryGroups { get; set; }
+        [DataMember(Name = "recipeVideoId")]
+        string RecipeVideoId { get; set; }
         [DataMember(Name = "siteUrl")]
-        string siteUrl;
+        string siteUrl { get; set; }
     }
 }

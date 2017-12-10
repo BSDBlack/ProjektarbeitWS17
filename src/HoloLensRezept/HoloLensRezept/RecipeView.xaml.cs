@@ -26,7 +26,22 @@ namespace HoloLensRezept
         {
             this.InitializeComponent();
 
+            Recipe result = await GetRecipe(349111120054623);
 
+        }
+
+        public async static Task<Recipe> GetRecipe(int recipeId)
+        {
+            HttpClient http = new HttpClient();
+            String url = String.Format("http://api.chefkoch.de/v2/recipes/{0}", recipeId);
+            var response = await http.GetAsync(url);
+            var result = await response.Content.ReadAsStringAsync();
+            DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(Recipe));
+
+            var ms = new MemoryStream(Encoding.UTF8.GetBytes(result));
+            Recipe data = (RootObject)serializer.ReadObject(ms);
+
+            return data;
 
         }
     }
