@@ -8,7 +8,7 @@ using System.Runtime.Serialization;
 namespace HoloLensRezept
 {
     [DataContract]
-    class Recipe
+    public class Recipe
     {
         [DataMember(Name = "id")]
         string Id { get; set; }

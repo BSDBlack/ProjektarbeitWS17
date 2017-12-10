@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Runtime.Serialization.Json;
+using System.Text;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -26,7 +30,7 @@ namespace HoloLensRezept
         {
             this.InitializeComponent();
 
-            Recipe result = await GetRecipe(349111120054623);
+            //Recipe result = await GetRecipe(349111120054623);
 
         }
 
@@ -39,7 +43,7 @@ namespace HoloLensRezept
             DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(Recipe));
 
             var ms = new MemoryStream(Encoding.UTF8.GetBytes(result));
-            Recipe data = (RootObject)serializer.ReadObject(ms);
+            Recipe data = (Recipe)serializer.ReadObject(ms);
 
             return data;
 

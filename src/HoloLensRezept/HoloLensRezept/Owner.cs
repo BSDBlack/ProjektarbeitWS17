@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace HoloLensRezept
 {
     [DataContract]
-    class Owner
+    public class Owner
     {
         [DataMember(Name ="id")]
         int Id { get; set; }

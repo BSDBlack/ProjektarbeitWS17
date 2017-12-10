@@ -7,7 +7,7 @@ using System.Runtime.Serialization;
 
 namespace HoloLensRezept
 {
-    class IngredientGroup
+    public class IngredientGroup
     {
         [DataMember(Name = "header")]
         string Header{ get; set; }
