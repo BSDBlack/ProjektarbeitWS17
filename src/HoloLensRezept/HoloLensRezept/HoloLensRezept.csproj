@@ -101,6 +101,8 @@
     <Compile Include="Buylist_AddItemDialog.xaml.cs">
       <DependentUpon>Buylist_AddItemDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Ingredient.cs" />
+    <Compile Include="IngredientGroup.cs" />
     <Compile Include="MyRecieps.xaml.cs">
       <DependentUpon>MyRecieps.xaml</DependentUpon>
     </Compile>

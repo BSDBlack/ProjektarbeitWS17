@@ -9,17 +9,17 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <ListView Name="BuyListView" Height="202" Margin="20,20,20,0" VerticalAlignment="Top" />
-        <Button HorizontalAlignment="Left" Height="200" Margin="20,240,0,0" VerticalAlignment="Top" Width="188" Click="Back_Click" Background="DarkGray">
+        <Button Name="Back_Button" HorizontalAlignment="Left" Height="200" Margin="20,240,0,0" VerticalAlignment="Top" Width="188" Click="Back_Click" Background="Black">
             <StackPanel>
                 <Image Source="Assets/zurueck_Freigestellt.png" Height="162"/>
             </StackPanel>
         </Button>
-        <Button HorizontalAlignment="Left" Height="200" Margin="228,240,0,0" VerticalAlignment="Top" Width="188" Click="Add_Click" Background="DarkGray">
+        <Button Name="Add_Button" HorizontalAlignment="Left" Height="200" Margin="228,240,0,0" VerticalAlignment="Top" Width="188" Click="Add_Click" Background="Black">
             <StackPanel>
                 <Image Source="Assets/AddPiktogramm.png" Height="162"/>
             </StackPanel>
         </Button>
-        <Button HorizontalAlignment="Left" Height="200" Margin="436,240,0,0" VerticalAlignment="Top" Width="188" Click="Delete_Click" Background="DarkGray">
+        <Button Name="Delete_Button" HorizontalAlignment="Left" Height="200" Margin="436,240,0,0" VerticalAlignment="Top" Width="188" Click="Delete_Click" Background="Black">
             <StackPanel>
                 <Image Source="Assets/DeletePiktogramm.png" Height="162"/>
             </StackPanel>

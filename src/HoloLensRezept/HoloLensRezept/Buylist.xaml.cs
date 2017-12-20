@@ -22,14 +22,14 @@ namespace HoloLensRezept
     /// </summary>
     public sealed partial class Buylist : Page
     {
+        Windows.Storage.StorageFolder localFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+
         public Buylist()
         {
             this.InitializeComponent();
 
+            //List < string > = localFolder;
 
-            BuyListView.Items.Add("Kartoffeln");
-            BuyListView.Items.Add("Kekse");
-            BuyListView.Items.Add("Mehl");
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)

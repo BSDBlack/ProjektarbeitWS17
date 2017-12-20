@@ -11,70 +11,70 @@ namespace HoloLensRezept
     public class Recipe
     {
         [DataMember(Name = "id")]
-        string Id { get; set; }
+        public string Id { get; set; }
         [DataMember(Name = "type")]
-        int Type { get; set; }
+        public int Type { get; set; }
         [DataMember(Name = "title")]
-        string Title { get; set; }
+        public string Title { get; set; }
         [DataMember(Name = "subtitle")]
-        string Subtitle { get; set; }
+        public string Subtitle { get; set; }
         [DataMember(Name = "owner")]
-        Owner OwnerVal { get; set; }
+        public Owner OwnerVal { get; set; }
         [DataMember(Name = "rating")]
-        Rating RatingVal { get; set; }
+        public Rating RatingVal { get; set; }
         [DataMember(Name = "difficulty")]
-        int Difficulty { get; set; }
+        public int Difficulty { get; set; }
         [DataMember(Name = "hasImage")]
-        bool hasImage { get; set; }
+        public bool hasImage { get; set; }
         [DataMember(Name = "hasVideo")]
-        bool hasVideo { get; set; }
+        public bool hasVideo { get; set; }
         [DataMember(Name = "previewImageId")]
-        string PreviewImageId { get; set; }
+        public string PreviewImageId { get; set; }
         [DataMember(Name = "preparationTime")]
-        int preparationTime { get; set; }
+        public int preparationTime { get; set; }
         [DataMember(Name = "isSubmitted")]
-        bool IsSubmitted { get; set; }
+        public bool IsSubmitted { get; set; }
         [DataMember(Name = "isRejected")]
-        bool IsRejected { get; set; }
+        public bool IsRejected { get; set; }
         [DataMember(Name = "createdAt")]
-        string CreatedAt { get; set; }
+        public string CreatedAt { get; set; }
         [DataMember(Name = "imageCount")]
-        int ImageCount { get; set; }
+        public int ImageCount { get; set; }
         [DataMember(Name = "editor")]
-        string Editor { get; set; }
+        public string Editor { get; set; }
         [DataMember(Name = "submissionDate")]
-        string SubmissionDate { get; set; }
+        public string SubmissionDate { get; set; }
         [DataMember(Name = "isPremium")]
-        bool IsPremium { get; set; }
+        public bool IsPremium { get; set; }
         [DataMember(Name = "status")]
-        int Status { get; set; }
+        public int Status { get; set; }
         [DataMember(Name = "servings")]
-        int Servings { get; set; }
+        public int Servings { get; set; }
         [DataMember(Name = "kCalories")]
-        int KCalories { get; set; }
+        public int KCalories { get; set; }
         [DataMember(Name = "instructions")]
         public string Instructions { get; set; }
         [DataMember(Name = "miscellaneousText")]
-        string MiscellaneousText { get; set; }
+        public string MiscellaneousText { get; set; }
         [DataMember(Name = "ingredientsText")]
-        string IngredientsText { get; set; }
+        public string IngredientsText { get; set; }
         [DataMember(Name = "tags")]
-        List<String> Tags { get; set; }
+        public List<String> Tags { get; set; }
         [DataMember(Name = "viewCount")]
-        int ViewCount { get; set; }
+        public int ViewCount { get; set; }
         [DataMember(Name = "cookingTime")]
-        int CookingTime { get; set; }
+        public int CookingTime { get; set; }
         [DataMember(Name = "restingTime")]
-        int RestingTime { get; set; }
+        public int RestingTime { get; set; }
         [DataMember(Name = "totalTime")]
-        int TotalTime { get; set; }
+        public int TotalTime { get; set; }
         [DataMember(Name = "ingredientGroups")]
-        List<IngredientGroup> IngredientsGroups { get; set; }
+        public List<IngredientGroup> IngredientsGroups { get; set; }
         [DataMember(Name = "categoryGroups")]
-        List<int> CategoryGroups { get; set; }
+        public List<int> CategoryGroups { get; set; }
         [DataMember(Name = "recipeVideoId")]
-        string RecipeVideoId { get; set; }
+        public string RecipeVideoId { get; set; }
         [DataMember(Name = "siteUrl")]
-        string siteUrl { get; set; }
+        public string siteUrl { get; set; }
     }
 }

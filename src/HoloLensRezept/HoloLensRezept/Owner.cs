@@ -11,18 +11,18 @@ namespace HoloLensRezept
     public class Owner
     {
         [DataMember(Name ="id")]
-        string Id { get; set; }
+        public string Id { get; set; }
         [DataMember(Name = "username")]
-        string Username { get; set; }
+        public string Username { get; set; }
         [DataMember(Name = "rank")]
-        int Rank { get; set; }
+        public int Rank { get; set; }
         [DataMember(Name = "role")]
-        string Role { get; set; }
+        public string Role { get; set; }
         [DataMember(Name = "hasAvatar")]
-        bool HasAvatar { get; set; }
+        public bool HasAvatar { get; set; }
         [DataMember(Name = "hasPaid")]
-        bool HasPaid { get; set; }
+        public bool HasPaid { get; set; }
         [DataMember(Name = "deleted")]
-        bool Deleted { get; set; }
+        public bool Deleted { get; set; }
     }
 }
