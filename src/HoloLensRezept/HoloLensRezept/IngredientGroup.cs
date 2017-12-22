@@ -7,11 +7,12 @@ using System.Runtime.Serialization;
 
 namespace HoloLensRezept
 {
+    [DataContract]
     public class IngredientGroup
     {
         [DataMember(Name = "header")]
-        string Header{ get; set; }
+        public string Header{ get; set; }
         [DataMember(Name = "ingredients")]
-        List<Ingredient> Ingredients { get; set; }
+        public List<Ingredient> Ingredients { get; set; }
     }
 }

@@ -8,13 +8,31 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button Name="Back_Button" HorizontalAlignment="Left" Height="200" Margin="20,240,0,0" VerticalAlignment="Top" Width="188" Click="Back_Click" Background="White">
+        <Button Name="Back_Button" HorizontalAlignment="Left" Height="200" Margin="20,20,0,0" VerticalAlignment="Top" Width="188" Click="Back_Click">
             <StackPanel>
-                <Image Source="Assets/zurueck_Freigestellt.png" Height="162"/>
+                <Image Source="Assets/ZurueckPiktogramm.png" Height="162"/>
             </StackPanel>
         </Button>
-        <TextBlock Name="Recipe_TextBlock" HorizontalAlignment="Left" Height="400" Margin="260,20,0,0" VerticalAlignment="Top" Width="400"  Foreground="White">
+        <Button HorizontalAlignment="Left" Height="200" Margin="228,20,0,0" VerticalAlignment="Top" Width="188" Click="Back_Click">
+            <StackPanel>
+                <Image Source="Assets/TimerPiktogramm.png" Height="162"/>
+            </StackPanel>
+        </Button>
+        <TextBox Name="Title_TextBox" HorizontalAlignment="Left" Height="50" Margin="436,20,0,0" VerticalAlignment="Top" Width="386" FontSize="30" >
+            
+        </TextBox>
+        <ListView Name="Ingredients_ListView" HorizontalAlignment="Left" Height="130" Margin="436,90,0,0" VerticalAlignment="Top" Width="386" >
+            
+        </ListView>
+        <Button Name="MeineRezepte_Button" HorizontalAlignment="Left" Height="200" Margin="20,240,0,0" VerticalAlignment="Top" Width="188" Click="Back_Click">
+            <StackPanel>
+                <Image Source="Assets/MeineRezeptePiktogramm.png" Height="162"/>
+            </StackPanel>
+        </Button>
+        <ScrollViewer VerticalScrollMode="Enabled" Height="200" Margin="228,240,0,0" VerticalAlignment="Top" Width="594" HorizontalScrollMode="Disabled" HorizontalScrollBarVisibility="Disabled">
+        <TextBlock Name="Recipe_TextBlock" HorizontalAlignment="Left"   Foreground="White" TextWrapping="WrapWholeWords">
             
         </TextBlock>
+        </ScrollViewer>
     </Grid>
 </Page>

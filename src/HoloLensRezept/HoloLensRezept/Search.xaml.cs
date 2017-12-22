@@ -25,6 +25,7 @@ namespace HoloLensRezept
     /// </summary>
     public sealed partial class Search : Page
     {
+        RecipeList recipes;
         public Search()
         {
             this.InitializeComponent();
@@ -34,15 +35,15 @@ namespace HoloLensRezept
         public async void GetRecipeList(string recipe)
         {
             HttpClient http = new HttpClient();
-            String url = String.Format("http://api.chefkoch.de/v2/recipes/{0}", recipeId);
+            String url = String.Format("http://api.chefkoch.de/v2/recipes?query={0}", recipe);
             var response = await http.GetAsync(url);
             var result = await response.Content.ReadAsStringAsync();
-            DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(Recipe));
+            DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(RecipeList));
 
             var ms = new MemoryStream(Encoding.UTF8.GetBytes(result));
-            Recipe data = (Recipe)serializer.ReadObject(ms);
+            RecipeList data = (RecipeList)serializer.ReadObject(ms);
 
-            this.Recipe_TextBlock.Text = data.Instructions;
+            Frame.Navigate(typeof(RecipeView), data.Results.First().recipe.Id);
 
         }
 
@@ -60,10 +61,21 @@ namespace HoloLensRezept
             Frame.Navigate(typeof(RecipeView), recipeId);
         }
 
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        public async void Search_Click(object sender, RoutedEventArgs e)
         {
-            GetRecipeList(this.SearchTextBox.Text);
+            Search_RequestDialog search_RequestDialog = new Search_RequestDialog();
+            string request;
+
+            ContentDialogResult cdr = await search_RequestDialog.ShowAsync();
+
+            if (cdr == ContentDialogResult.Primary)
+            {
+                request = search_RequestDialog.Text;
+                GetRecipeList(request);
+            }
+
+            
         }
+
     }
 }

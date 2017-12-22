@@ -30,8 +30,6 @@ namespace HoloLensRezept
         {
             this.InitializeComponent();
 
-            GetRecipe(349111120054623);
-
         }
 
         public async void GetRecipe(long recipeId)
@@ -45,10 +43,26 @@ namespace HoloLensRezept
             var ms = new MemoryStream(Encoding.UTF8.GetBytes(result));
             Recipe data = (Recipe)serializer.ReadObject(ms);
 
-            //return data;
-
+            this.Title_TextBox.Text = data.Title;
+            foreach(IngredientGroup ig in data.IngredientsGroups)
+            {
+                foreach(Ingredient i in ig.Ingredients)
+                {
+                    this.Ingredients_ListView.Items.Add(String.Concat(i.Amount, i.Unit, " ", i.Name));
+                }
+            }
             this.Recipe_TextBlock.Text = data.Instructions;
 
+        }
+
+        // Parse passed Data
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+
+            string recipeId = (string) e.Parameter;
+
+            GetRecipe(Int64.Parse(recipeId));
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)

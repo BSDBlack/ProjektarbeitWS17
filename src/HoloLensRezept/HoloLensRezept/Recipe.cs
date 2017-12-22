@@ -41,7 +41,7 @@ namespace HoloLensRezept
         [DataMember(Name = "imageCount")]
         public int ImageCount { get; set; }
         [DataMember(Name = "editor")]
-        public string Editor { get; set; }
+        public Editor Editor_C { get; set; }
         [DataMember(Name = "submissionDate")]
         public string SubmissionDate { get; set; }
         [DataMember(Name = "isPremium")]

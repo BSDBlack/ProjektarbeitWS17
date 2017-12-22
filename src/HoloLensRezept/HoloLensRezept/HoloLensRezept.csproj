@@ -98,6 +98,11 @@
     <Compile Include="Buylist.xaml.cs">
       <DependentUpon>Buylist.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Editor.cs" />
+    <Compile Include="ResultRecipe.cs" />
+    <Compile Include="Search_RequestDialog.xaml.cs">
+      <DependentUpon>Search_RequestDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Buylist_AddItemDialog.xaml.cs">
       <DependentUpon>Buylist_AddItemDialog.xaml</DependentUpon>
     </Compile>
@@ -113,6 +118,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rating.cs" />
     <Compile Include="Recipe.cs" />
+    <Compile Include="RecipeList.cs" />
     <Compile Include="RecipeView.xaml.cs">
       <DependentUpon>RecipeView.xaml</DependentUpon>
     </Compile>
@@ -134,18 +140,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\AddPiktogramm.png" />
-    <Content Include="Assets\add_Freigestellt.png" />
     <Content Include="Assets\DeletePiktogramm.png" />
-    <Content Include="Assets\Delete_Freigestellt.png" />
-    <Content Include="Assets\Einkaufsliste_Freigestellt.png" />
-    <Content Include="Assets\Einstellungen_Freigestellt.png" />
-    <Content Include="Assets\MeineRezepte_Freigestellt.png" />
-    <Content Include="Assets\RezeptdesTagesBannerVersion2.png" />
+    <Content Include="Assets\EinkaufslistePiktogramm.png" />
+    <Content Include="Assets\EinstellungenPiktogramm.png" />
+    <Content Include="Assets\MeineRezeptePiktogramm.png" />
+    <Content Include="Assets\PlusPiktogramm.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
-    <Content Include="Assets\Suche_Freigestellt.png" />
-    <Content Include="Assets\Tools_Freigestellt.png" />
-    <Content Include="Assets\Wecker_Freigestellt.png" />
-    <Content Include="Assets\zurueck_Freigestellt.png" />
+    <Content Include="Assets\TimerPiktogramm.png" />
+    <Content Include="Assets\ToolsPiktogramm.png" />
+    <Content Include="Assets\ZurueckPiktogramm.png" />
     <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -156,6 +159,10 @@
     <Page Include="Buylist.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Search_RequestDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Buylist_AddItemDialog.xaml">
       <SubType>Designer</SubType>

@@ -11,24 +11,24 @@ namespace HoloLensRezept
     public class Ingredient
     {
         [DataMember(Name = "id")]
-        string Id;
+        public string Id;
         [DataMember(Name = "name")]
-        string Name;
+        public string Name;
         [DataMember(Name = "unit")]
-        string Unit;
+        public string Unit;
         [DataMember(Name = "unitId")]
-        string UnitId;
+        public string UnitId;
         [DataMember(Name = "amount")]
-        double Amount;
+        public double Amount;
         [DataMember(Name = "isBasic")]
-        bool IsBasic;
+        public bool IsBasic;
         [DataMember(Name = "usageInfo")]
-        string usageInfo;
+        public string usageInfo;
         [DataMember(Name = "url")]
-        string Url;
+        public string Url;
         [DataMember(Name = "foodId")]
-        string FoodId;
+        public string FoodId;
         [DataMember(Name = "productGroup")]
-        string ProductGroup;
+        public string ProductGroup;
     }
 }

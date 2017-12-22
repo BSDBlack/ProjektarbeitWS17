@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 namespace HoloLensRezept
 {
     [DataContract]
-    class RecipeList
+    class ResultRecipe
     {
-        [DataMember(Name = "count")]
-        public int Count { get; set; }
-        [DataMember(Name = "results")]
-        public List<ResultRecipe> Results { get; set; }
+        [DataMember(Name = "score")]
+        public double score { get; set; }
+        [DataMember(Name = "recipe")]
+        public Recipe recipe { get; set; }
     }
 }
