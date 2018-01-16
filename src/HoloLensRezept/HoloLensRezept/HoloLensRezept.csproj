@@ -143,6 +143,10 @@
     <Content Include="Assets\DeletePiktogramm.png" />
     <Content Include="Assets\EinkaufslistePiktogramm.png" />
     <Content Include="Assets\EinstellungenPiktogramm.png" />
+    <Content Include="Assets\ElementLoeschenPiktogramm.png" />
+    <Content Include="Assets\FavoritenPiktogramm.png" />
+    <Content Include="Assets\LupePiktogramm.png" />
+    <Content Include="Assets\MailPiktogramm.png" />
     <Content Include="Assets\MeineRezeptePiktogramm.png" />
     <Content Include="Assets\PlusPiktogramm.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

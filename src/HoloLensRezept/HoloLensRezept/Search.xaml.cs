@@ -25,6 +25,7 @@ namespace HoloLensRezept
     /// </summary>
     public sealed partial class Search : Page
     {
+        int rowcount = 0;
         RecipeList recipes;
         public Search()
         {
@@ -43,20 +44,61 @@ namespace HoloLensRezept
             var ms = new MemoryStream(Encoding.UTF8.GetBytes(result));
             RecipeList data = (RecipeList)serializer.ReadObject(ms);
 
-            Frame.Navigate(typeof(RecipeView), data.Results.First().recipe.Id);
+            if(data.Count > 2)
+            {
+                rowcount = ((data.Count - 2) / 4) + ((data.Count - 2) % 4);
+            }
+            for(int i = 0; i < rowcount; ++i)
+            {
+                RowDefinition rd = new RowDefinition();
+                rd.Height = new GridLength(240);
+                ResultGrid.RowDefinitions.Add(rd);
+            }
+            int recipecounter = 0;
+            int rowcounter = 0;
+
+            foreach(ResultRecipe r in data.Results)
+            {
+                Button button = new Button();
+                StackPanel stackPanel = new StackPanel();
+                Image image = new Image();
+                TextBlock textBlock = new TextBlock();
+                textBlock.Text = r.recipe.Title;
+                textBlock.TextWrapping = TextWrapping.Wrap;
+
+                stackPanel.Children.Add(image);
+                stackPanel.Children.Add(textBlock);
+
+                button.Content = stackPanel;
+                button.Click += RecipeSelect_Click;
+                button.DataContext = r.recipe.Id;
+
+                ResultGrid.Children.Add(button);
+                Grid.SetColumn(button, (recipecounter + 2) % 4);
+                Grid.SetRow(button, rowcounter);
+
+                ++recipecounter;
+                if(((recipecounter - 2) % 4) == 0)
+                {
+                    rowcounter++;
+                }
+            }
+
+            //Frame.Navigate(typeof(RecipeView), data.Results.First().recipe.Id);
 
         }
 
         /* Function for navigation to MainPage page */
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Back_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPage));
         }
 
         private void RecipeSelect_Click(object sender, RoutedEventArgs e)
         {
+            
             string recipeId;
-            recipeId = "";
+            recipeId = (e.OriginalSource as FrameworkElement).DataContext.ToString();
 
             Frame.Navigate(typeof(RecipeView), recipeId);
         }

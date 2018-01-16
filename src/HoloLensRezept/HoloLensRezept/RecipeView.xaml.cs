@@ -67,7 +67,17 @@ namespace HoloLensRezept
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPage));
+            Frame.Navigate(typeof(Search));
+        }
+
+        private void SetTimer_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ToggleFavorites_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

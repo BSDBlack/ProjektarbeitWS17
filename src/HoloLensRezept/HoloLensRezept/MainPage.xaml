@@ -15,7 +15,7 @@
         </Button>
         <Button HorizontalAlignment="Left" Height="200" Margin="228,20,0,0" VerticalAlignment="Top" Width="188" Click="Search_Click" >
             <StackPanel>
-                <Image Source="Assets/SuchePiktogramm.png" Stretch="Fill" />
+                <Image Source="Assets/LupePiktogramm.png" Stretch="Fill" />
             </StackPanel>
         </Button>
         <Button HorizontalAlignment="Left" Height="200" Margin="20,240,0,0" VerticalAlignment="Top" Width="188" Click="Buylist_Click" >

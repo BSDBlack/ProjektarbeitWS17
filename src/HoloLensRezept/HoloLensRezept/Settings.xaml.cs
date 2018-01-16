@@ -26,5 +26,11 @@ namespace HoloLensRezept
         {
             this.InitializeComponent();
         }
+
+        /* Function for navigation to MainPage page */
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+        }
     }
 }

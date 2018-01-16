@@ -13,7 +13,7 @@
                 <Image Source="Assets/ZurueckPiktogramm.png" Height="162"/>
             </StackPanel>
         </Button>
-        <Button HorizontalAlignment="Left" Height="200" Margin="228,20,0,0" VerticalAlignment="Top" Width="188" Click="Back_Click">
+        <Button HorizontalAlignment="Left" Height="200" Margin="228,20,0,0" VerticalAlignment="Top" Width="188" Click="SetTimer_Click">
             <StackPanel>
                 <Image Source="Assets/TimerPiktogramm.png" Height="162"/>
             </StackPanel>
@@ -24,7 +24,7 @@
         <ListView Name="Ingredients_ListView" HorizontalAlignment="Left" Height="130" Margin="436,90,0,0" VerticalAlignment="Top" Width="386" >
             
         </ListView>
-        <Button Name="MeineRezepte_Button" HorizontalAlignment="Left" Height="200" Margin="20,240,0,0" VerticalAlignment="Top" Width="188" Click="Back_Click">
+        <Button Name="MeineRezepte_Button" HorizontalAlignment="Left" Height="200" Margin="20,240,0,0" VerticalAlignment="Top" Width="188" Click="ToggleFavorites_Click">
             <StackPanel>
                 <Image Source="Assets/MeineRezeptePiktogramm.png" Height="162"/>
             </StackPanel>
