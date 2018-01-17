@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // Die Elementvorlage "Leere Seite" wird unter https://go.microsoft.com/fwlink/?LinkId=234238 dokumentiert.
@@ -63,8 +64,11 @@ namespace HoloLensRezept
                 StackPanel stackPanel = new StackPanel();
                 Image image = new Image();
                 TextBlock textBlock = new TextBlock();
+                BitmapImage bitmapImage = new BitmapImage();
                 textBlock.Text = r.recipe.Title;
                 textBlock.TextWrapping = TextWrapping.Wrap;
+
+                image.Source = new BitmapImage(new Uri(r.recipe.PreviewImageId));
 
                 stackPanel.Children.Add(image);
                 stackPanel.Children.Add(textBlock);

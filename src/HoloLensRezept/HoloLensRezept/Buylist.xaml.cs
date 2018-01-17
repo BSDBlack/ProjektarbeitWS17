@@ -1,17 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
+using System.Collections.ObjectModel;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
 // Die Elementvorlage "Leere Seite" wird unter https://go.microsoft.com/fwlink/?LinkId=234238 dokumentiert.
 
@@ -23,18 +13,17 @@ namespace HoloLensRezept
     public sealed partial class Buylist : Page
     {
         Windows.Storage.StorageFolder localFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+        private static ObservableCollection<string> itemList = new ObservableCollection<string>();
 
         public Buylist()
         {
             this.InitializeComponent();
-
-            //List < string > = localFolder;
-
+            this.BuyListView.ItemsSource = itemList;
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Tools));
+            Frame.Navigate(typeof(MainPage));
         }
 
         private async void Add_Click(object sender, RoutedEventArgs e)
@@ -46,16 +35,16 @@ namespace HoloLensRezept
             if (cdr == ContentDialogResult.Primary)
             {
                 itemname = dialog.Text;
-                this.BuyListView.Items.Add(itemname);
+                itemList.Add(itemname);
             }
-
-            
-
         }
 
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
-            this.BuyListView.Items.Remove(this.BuyListView.SelectedItem);
+            if (this.BuyListView.SelectedItem != null)
+            {
+                itemList.Remove(this.BuyListView.SelectedItem.ToString());
+            }
         }
     }
 }
