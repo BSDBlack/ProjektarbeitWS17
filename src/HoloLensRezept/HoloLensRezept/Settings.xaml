@@ -13,5 +13,10 @@
                 <Image Source="Assets/ZurueckPiktogramm.png" Height="162"/>
             </StackPanel>
         </Button>
+        <Button Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" Height="200" Margin="228,20,0,0" VerticalAlignment="Top" Width="188" Click="EmailSettings_Click">
+            <StackPanel>
+                <Image Source="Assets/MailPiktogramm.png" Height="162"/>
+            </StackPanel>
+        </Button>
     </Grid>
 </Page>

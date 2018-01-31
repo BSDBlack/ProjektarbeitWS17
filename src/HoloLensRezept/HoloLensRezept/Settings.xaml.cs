@@ -32,5 +32,10 @@ namespace HoloLensRezept
         {
             Frame.Navigate(typeof(MainPage));
         }
+
+        private void EmailSettings_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
