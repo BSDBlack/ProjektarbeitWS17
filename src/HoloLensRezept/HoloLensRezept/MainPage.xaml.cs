@@ -1,17 +1,7 @@
-﻿using System;
+﻿using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 
 // Die Elementvorlage "Leere Seite" wird unter https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x407 dokumentiert.
 
@@ -22,9 +12,30 @@ namespace HoloLensRezept
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public static Dictionary<string, string> setting = new Dictionary<string, string>();
+
         public MainPage()
         {
             this.InitializeComponent();
+            readSettings();
+        }
+
+        private void readSettings()
+        {
+            Windows.Storage.StorageFolder localFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+            string filepath = localFolder.Path + "Settings.txt";
+            FileStream fileStream = new FileStream(filepath, FileMode.Open);
+            if(!File.Exists(filepath))
+            {
+                File.Create(filepath);
+            }
+            StreamReader streamReader = new StreamReader(fileStream);
+            while( !streamReader.EndOfStream)
+            {
+                string line = streamReader.ReadLine();
+                string[] keyValue = line.Split(' ');
+                setting.Add(keyValue[0], keyValue[1]);
+            }
         }
 
         /* Function for navigation to MyRecieps page */
