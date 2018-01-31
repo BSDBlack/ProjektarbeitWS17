@@ -27,7 +27,6 @@ namespace HoloLensRezept
     public sealed partial class Search : Page
     {
         int rowcount = 0;
-        RecipeList recipes;
         public Search()
         {
             this.InitializeComponent();
@@ -37,7 +36,7 @@ namespace HoloLensRezept
         public async void GetRecipeList(string recipe)
         {
             HttpClient http = new HttpClient();
-            String url = String.Format("http://api.chefkoch.de/v2/recipes?query={0}", recipe);
+            String url = String.Format("http://api.chefkoch.de/v2/recipes?query={0}&limit=100", recipe);
             var response = await http.GetAsync(url);
             var result = await response.Content.ReadAsStringAsync();
             DataContractJsonSerializer serializer = new DataContractJsonSerializer(typeof(RecipeList));
@@ -45,20 +44,28 @@ namespace HoloLensRezept
             var ms = new MemoryStream(Encoding.UTF8.GetBytes(result));
             RecipeList data = (RecipeList)serializer.ReadObject(ms);
 
-            // Now that we now the count of hits, get alle recipes
-            int recipeCount = data.Count;
+            // use the count of alle recipes we received
+            int recipeCount = data.Results.Count;
 
-            url = String.Format("http://api.chefkoch.de/v2/recipes?query={0}&limit={1}", recipe, recipeCount);
-            response = await http.GetAsync(url);
-            result = await response.Content.ReadAsStringAsync();
-            serializer = new DataContractJsonSerializer(typeof(RecipeList));
-            ms = new MemoryStream(Encoding.UTF8.GetBytes(result));
-            data = (RecipeList)serializer.ReadObject(ms);
-
-            if (data.Count > 2)
+            // If any old recipes, remove them
+            for (int i = ResultGrid.Children.Count - 1; i > 1; --i)
             {
-                rowcount = ((data.Count - 2) / 4) + ((data.Count - 2) % 4);
+                ResultGrid.Children.RemoveAt(i);
             }
+
+            // If any old unneeded rows, remove them
+            for( int i = ResultGrid.RowDefinitions.Count - 1; i > 0; --i)
+            {
+                ResultGrid.RowDefinitions.RemoveAt(i);
+            }
+
+            // Calculate amount of needed rows
+            if (recipeCount > 2)
+            {
+                rowcount = ((recipeCount - 2) / 4) + ((recipeCount - 2) % 4);
+            }
+
+            // Create alle new rows
             for(int i = 0; i < rowcount; ++i)
             {
                 RowDefinition rd = new RowDefinition();
@@ -68,6 +75,7 @@ namespace HoloLensRezept
             int recipecounter = 0;
             int rowcounter = 0;
 
+            //insert recipes into Grid
             foreach(ResultRecipe r in data.Results)
             {
                 Button button = new Button();
@@ -97,8 +105,6 @@ namespace HoloLensRezept
                     rowcounter++;
                 }
             }
-
-            //Frame.Navigate(typeof(RecipeView), data.Results.First().recipe.Id);
 
         }
 
