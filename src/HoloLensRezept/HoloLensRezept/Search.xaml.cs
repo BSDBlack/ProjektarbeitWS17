@@ -45,7 +45,17 @@ namespace HoloLensRezept
             var ms = new MemoryStream(Encoding.UTF8.GetBytes(result));
             RecipeList data = (RecipeList)serializer.ReadObject(ms);
 
-            if(data.Count > 2)
+            // Now that we now the count of hits, get alle recipes
+            int recipeCount = data.Count;
+
+            url = String.Format("http://api.chefkoch.de/v2/recipes?query={0}&limit={1}", recipe, recipeCount);
+            response = await http.GetAsync(url);
+            result = await response.Content.ReadAsStringAsync();
+            serializer = new DataContractJsonSerializer(typeof(RecipeList));
+            ms = new MemoryStream(Encoding.UTF8.GetBytes(result));
+            data = (RecipeList)serializer.ReadObject(ms);
+
+            if (data.Count > 2)
             {
                 rowcount = ((data.Count - 2) / 4) + ((data.Count - 2) % 4);
             }
@@ -68,7 +78,7 @@ namespace HoloLensRezept
                 textBlock.Text = r.recipe.Title;
                 textBlock.TextWrapping = TextWrapping.Wrap;
 
-                image.Source = new BitmapImage(new Uri(r.recipe.PreviewImageId));
+                //image.Source = new BitmapImage(new Uri(r.recipe.PreviewImageId));
 
                 stackPanel.Children.Add(image);
                 stackPanel.Children.Add(textBlock);
