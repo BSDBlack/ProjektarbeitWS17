@@ -19,8 +19,6 @@ namespace HoloLensRezept
             this.InitializeComponent();
         }
 
-
-
         /* Function for navigation to MyRecieps page */
         private void MyRecieps_Click(object sender, RoutedEventArgs e)
         {
