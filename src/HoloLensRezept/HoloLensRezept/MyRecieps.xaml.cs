@@ -25,6 +25,8 @@ namespace HoloLensRezept
         public MyRecieps()
         {
             this.InitializeComponent();
+
+            
         }
 
         /* Function for navigation to previous page */

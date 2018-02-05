@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using System.Linq;
+using Windows.ApplicationModel.Contacts;
+using Windows.ApplicationModel.Email;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -24,6 +27,32 @@ namespace HoloLensRezept
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPage));
+        }
+
+        private async void Email_Click(object sender, RoutedEventArgs e)
+        {
+
+            if(App.setting.ContainsKey("email"))
+            {
+
+                string result;
+                App.setting.TryGetValue("email", out result);
+
+                string messageBody = String.Empty;
+
+                foreach (string s in itemList)
+                {
+                    messageBody = String.Concat(messageBody, s, "\n");
+                }
+
+                var emailMessage = new Windows.ApplicationModel.Email.EmailMessage();
+                emailMessage.Body = messageBody;
+                var emailRecipient = new Windows.ApplicationModel.Email.EmailRecipient(result);
+                emailMessage.To.Add(emailRecipient);
+                emailMessage.Subject = "BuyList";
+
+                await Windows.ApplicationModel.Email.EmailManager.ShowComposeNewEmailAsync(emailMessage);
+            }
         }
 
         private async void Add_Click(object sender, RoutedEventArgs e)

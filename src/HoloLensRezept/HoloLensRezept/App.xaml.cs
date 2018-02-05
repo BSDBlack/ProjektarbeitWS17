@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
@@ -22,6 +23,9 @@ namespace HoloLensRezept
     /// </summary>
     sealed partial class App : Application
     {
+        public static Dictionary<string, string> setting = new Dictionary<string, string>();
+
+
         /// <summary>
         /// Initialisiert das Singletonanwendungsobjekt. Dies ist die erste Zeile von erstelltem Code
         /// und daher das logische Äquivalent von main() bzw. WinMain().
@@ -54,6 +58,9 @@ namespace HoloLensRezept
                 {
                     //TODO: Zustand von zuvor angehaltener Anwendung laden
                 }
+
+                // Load Settings File
+                Task task = this.readSettings();
 
                 // Den Frame im aktuellen Fenster platzieren
                 Window.Current.Content = rootFrame;
@@ -95,6 +102,36 @@ namespace HoloLensRezept
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: Anwendungszustand speichern und alle Hintergrundaktivitäten beenden
             deferral.Complete();
+        }
+
+        private async Task readSettings()
+        {
+            Windows.Storage.StorageFolder localFolder = Windows.Storage.ApplicationData.Current.LocalFolder;
+            string filepath = localFolder.Path + "\\Settings.txt";
+            if (!File.Exists(filepath))
+            {
+                File.Create(filepath);
+                FileStream fileOutStream = new FileStream(filepath, FileMode.Open);
+                StreamWriter streamWriter = new StreamWriter(fileOutStream);
+
+                streamWriter.WriteLine("email test@email.de");
+
+            }
+            try
+            {
+                FileStream fileStream = new FileStream(filepath, FileMode.Open);
+                StreamReader streamReader = new StreamReader(fileStream);
+                while (!streamReader.EndOfStream)
+                {
+                    string line = streamReader.ReadLine();
+                    string[] keyValue = line.Split(' ');
+                    setting.Add(keyValue[0], keyValue[1]);
+                }
+            }
+            catch (System.Exception e)
+            {
+
+            }
         }
     }
 }
