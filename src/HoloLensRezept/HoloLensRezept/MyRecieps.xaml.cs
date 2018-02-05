@@ -29,10 +29,19 @@ namespace HoloLensRezept
             
         }
 
-        /* Function for navigation to previous page */
-        private void Button_Click(object sender, RoutedEventArgs e)
+        /* Function for navigation to MainPage page */
+        private void Back_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPage));
+        }
+
+        private void RecipeSelect_Click(object sender, RoutedEventArgs e)
+        {
+
+            string recipeId;
+            recipeId = (e.OriginalSource as FrameworkElement).DataContext.ToString();
+
+            Frame.Navigate(typeof(RecipeView), recipeId);
         }
     }
 }
