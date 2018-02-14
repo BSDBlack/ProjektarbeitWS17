@@ -9,13 +9,13 @@
     >
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ScrollViewer HorizontalAlignment="Left" Height="480" Margin="0,0,0,0" VerticalAlignment="Top" Width="853">
-            <Grid Name="ResultGrid" Width="813" Grid.RowSpan="240" Grid.ColumnSpan="188">
+        <ScrollViewer HorizontalAlignment="Left" Height="480" Margin="20,0,0,0" VerticalAlignment="Top" Width="833">
+            <Grid Name="ResultGrid" Width="833" Grid.RowSpan="240" Grid.ColumnSpan="188">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="213" />
-                    <ColumnDefinition Width="213" />
-                    <ColumnDefinition Width="213" />
-                    <ColumnDefinition Width="213" />
+                    <ColumnDefinition Width="208" />
+                    <ColumnDefinition Width="208" />
+                    <ColumnDefinition Width="208" />
+                    <ColumnDefinition Width="208" />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="240" />

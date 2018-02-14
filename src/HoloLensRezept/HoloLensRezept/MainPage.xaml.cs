@@ -3,6 +3,9 @@ using Windows.UI.Xaml.Controls;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
+using System.Data.Common;
+using Windows.UI.ViewManagement;
+using Windows.Foundation;
 
 // Die Elementvorlage "Leere Seite" wird unter https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x407 dokumentiert.
 
@@ -17,6 +20,9 @@ namespace HoloLensRezept
         public MainPage()
         {
             this.InitializeComponent();
+
+            ApplicationView.PreferredLaunchViewSize = new Size(853, 480);
+            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
         }
 
         /* Function for navigation to MyRecieps page */

@@ -17,7 +17,6 @@ namespace HoloLensRezept
     {
         public static Dictionary<string, string> setting = new Dictionary<string, string>();
 
-
         /// <summary>
         /// Initialisiert das Singletonanwendungsobjekt. Dies ist die erste Zeile von erstelltem Code
         /// und daher das logische Äquivalent von main() bzw. WinMain().
