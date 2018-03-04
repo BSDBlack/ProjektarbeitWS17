@@ -91,9 +91,17 @@ namespace HoloLensRezept
             Frame.Navigate(typeof(Search));
         }
 
-        private void SetTimer_Click(object sender, RoutedEventArgs e)
+        private async void SetTimer_Click(object sender, RoutedEventArgs e)
         {
+            SetTimer_Dialog setTimer_Dialog = new SetTimer_Dialog();
+            string request;
 
+            ContentDialogResult cdr = await setTimer_Dialog.ShowAsync();
+
+            if (cdr == ContentDialogResult.Primary)
+            {
+
+            }
         }
 
         private void ToggleFavorites_Click(object sender, RoutedEventArgs e)

@@ -8,7 +8,7 @@
     x:Name="ContentDialog"
     Title="Set Timer"
     PrimaryButtonClick="ContentDialog_AddButtonClick"
-    PrimaryButtonText="Search"
+    PrimaryButtonText="Add"
     SecondaryButtonClick="ContentDialog_CancelButtonClick"
     SecondaryButtonText="Cancel"
     mc:Ignorable="d">
